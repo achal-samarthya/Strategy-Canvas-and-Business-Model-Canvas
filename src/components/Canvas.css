@@ -1,0 +1,204 @@
+/* Canvas Cards */
+.canvas-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.header-content h3 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-grid-header {
+  color: #27ae60;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #95a5a6;
+  margin-left: 28px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #95a5a6;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.icon-btn:hover {
+  background: #f0f2f5;
+  color: #2c3e50;
+}
+
+/* Custom Grid Layout matching the attachment */
+.bmc-grid-custom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 12px;
+  flex-grow: 1;
+  grid-template-areas:
+    "kp ka vp rel"
+    "kp sg vp kr"
+    "ch sg vp kr"
+    "rs rs cs cs";
+}
+
+/* Grid Area Assignments */
+.grid-kp {
+  grid-area: kp;
+}
+
+.grid-ch {
+  grid-area: ch;
+}
+
+.grid-ka {
+  grid-area: ka;
+}
+
+.grid-sg {
+  grid-area: sg;
+}
+
+.grid-vp {
+  grid-area: vp;
+}
+
+.grid-rel {
+  grid-area: rel;
+}
+
+.grid-kr {
+  grid-area: kr;
+}
+
+.grid-rs {
+  grid-area: rs;
+}
+
+.grid-cs {
+  grid-area: cs;
+}
+
+.bmc-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s;
+}
+
+.bmc-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #bdc3c7;
+}
+
+.block-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid #f0f2f5;
+  padding-bottom: 0.5rem;
+}
+
+.block-icon {
+  color: #95a5a6;
+}
+
+.bmc-card h4 {
+  font-size: 0.75rem;
+  color: #95a5a6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bmc-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bmc-card li {
+  font-size: 0.85rem;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Green Theme for Revenue Streams */
+.bmc-card.green-theme {
+  border-color: #d4efdf;
+  background: #f9fbfb;
+}
+
+.bmc-card.green-theme h4 {
+  color: #27ae60;
+}
+
+.bmc-card.green-theme .block-icon {
+  color: #27ae60;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.toggle-pill {
+  display: flex;
+  gap: 12px;
+  font-size: 0.75rem;
+  color: #95a5a6;
+}
+
+.toggle-pill .active {
+  color: #f1c40f;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .bmc-grid-custom {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "kp ka"
+      "kp sg"
+      "vp vp"
+      "rel kr"
+      "ch kr"
+      "rs cs";
+  }
+}
